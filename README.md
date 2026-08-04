@@ -1,30 +1,22 @@
-# Luminox Automation — Static Site (v5)
+# Luminox Automation — Static Site (v6)
 
-Plain HTML/CSS/JS. Push this whole folder to your GitHub repo and enable Pages.
+Plain HTML/CSS/JS, no dependencies beyond Google Fonts. All files sit flat at the repo root (matches what's actually live on GitHub Pages).
 
 ## Files
-- `index.html` — Home: consumer-focused, centered hero, Smart Home Solutions section, Why Choose Us (4 cards), Our Services (3 cards), Mobile App teaser, Final CTA
-- `about.html` — About: your Vision/Mission quotes, Why Choose Us (3 cards), Meet the Team with real photos
-- `services.html` — unchanged, still the full B2B engineering content
-- `styles.css` — updated with new centered-layout styles for Home/About (Services' look is untouched)
-- `script.js` — unchanged
-- `assets/team/fahad.png`, `assets/team/saad.png`, `assets/team/amir.png` — the real team photos, referenced by `about.html`
+- `index.html`, `about.html`, `services.html`
+- `styles.css`, `script.js`
+- `fahad.png`, `saad.png`, `amir.png` — team photos
 
 ## What changed this round
-- Home and About rewritten around the consumer smart-home experience — warmer copy, centered layout, dropped the "IoT Engineers by Trade" B2B framing (that stays on Services)
-- Vision/Mission on About updated to your exact quotes
-- Real team photos wired in: Fahad Khan (Founder & CEO), Saad Khan (Founder & CPO), Amir Khan (Co-founder & CTO)
-- "Request a Demo" is now the primary CTA throughout Home/About, in blue per your spec
-- Added a Mobile App "Coming Soon" section
-- Dropped from Home/About: the patent-pending case-study panel, CamelX/AgriTech teasers, and credibility stats (6+ years, GCC deployments, etc.) — all B2B material that was clashing with the consumer tone.
-
-**Flagging again since it's easy to miss:** after this change, none of the site shows your track record (years in business, patent pending, GCC deployments) — it all moved to Services. Not a problem if that's what you want, just don't want it to vanish by accident. Say the word if you'd like a toned-down trust strip added back to Home or About.
+- **Subtle brand-colored glow** added behind the Home and About hero sections (soft amber + blue radial gradients, very low opacity) — Services untouched, as before.
+- **Footer**: simplified to "Mumbai, India" only; phone, email, and LinkedIn are now icon-only circular buttons (no text labels), on all three pages. "Get in Touch" column now shows phone + email icons instead of text links.
+- **Team cards** (About): each person now has their personal LinkedIn icon-link below their name — Fahad, Saad, and Amir's actual profile URLs.
+- All icons are hand-coded inline SVG (no icon-library dependency, renders consistently everywhere) — this also resolves the earlier "emoji icons render inconsistently" flag for the footer and team section specifically. The card icons elsewhere (Why Choose Us, Services, etc.) still use text/emoji symbols — say the word if you want those converted to SVG too.
 
 ## Still open
-- **Smart Home Solutions image** (Home page): still a placeholder box. Pick one of the four I showed earlier, or send your own photo, and I'll wire in the real file.
-- Contact form, real icon set, og:image — unchanged from before, still open, lower priority.
+- **Smart Home Solutions image** (Home page): still a placeholder box, waiting on your pick from the four shown earlier, or your own photo.
+- Track-record stats (years in business, patent, GCC deployments) — still only live on Services, dropped from Home/About per your last request. Still flagging in case that's not what you want long-term.
+- Contact form and og:image — unchanged, still open, low priority.
 
-## Uploading to GitHub
-Same as last time (Add file → Upload files, drag files in, Commit), with one addition: this time also drag in the whole `assets` folder so it lands at `assets/team/...` relative to the repo root — the team photos on About need that exact path. If your browser's drag-and-drop doesn't preserve folders, upload the 6 files at the root first, then open "Add file → Upload files" again and drag just the 3 photos in — GitHub will let you type `assets/team/` as the target path before confirming.
-
-Pages is already turned on from last time, so it'll pick up these changes automatically once you commit.
+## Uploading
+Same as before: on GitHub, open each changed file, click the pencil (edit) icon, select all, paste in the new content, commit. Changed this round: `index.html`, `about.html`, `services.html`, `styles.css`. (`fahad.png`, `saad.png`, `amir.png`, `script.js` are unchanged, no need to re-upload those.)
